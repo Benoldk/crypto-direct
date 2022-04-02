@@ -3,11 +3,24 @@ import Exchange from './Exchange'
 import { v4 as uuid } from 'uuid'
 
 export default function ExchangeList() {
-    const API_ENDPOINT = 'https://www.coingecko.com/en/api';
-    const { data: exchanges, loading, error } = useFetch(API_ENDPOINT);
+    // API URL
+    const URL = 'https://api.coingecko.com/api/v3';
+
+    // API endpoints to append to url to get data
+    const ENDPOINTS = {
+        COINS_LIST: '/coins/list',
+        EXCHANGES: '/exchanges',
+        INDEXES: '/indexes',
+        DERIVATIVES: '/derivatives',
+        GLOBAL: '/global'
+    }
+    
+    // use custom hook to fetch data on page load
+    const { data: exchanges, loading, error } = useFetch(`${URL}${ENDPOINTS.EXCHANGES}`);
 
     return (
         <div>
+            {/** Conditionally load elements **/}
             {loading && <div>LOADING...</div>}
             {error && <div>{error}</div>}
             {!loading && !error && exchanges.length ?

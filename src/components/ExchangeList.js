@@ -11,7 +11,7 @@ export default function ExchangeList() {
             {loading && <div>LOADING...</div>}
             {error && <div>{error}</div>}
             {!loading && !error && exchanges.length ?
-                exchanges.map(exchange =>
+                exchanges.slice(0, 10).map(exchange =>
                     <Exchange key={uuid()} exchange={exchange} />
                 )
                 : null

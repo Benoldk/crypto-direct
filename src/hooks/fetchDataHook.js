@@ -6,12 +6,16 @@ export default function useFetch(url) {
     const [error, setError] = useState(null);
 
     useEffect(() => {
+        // console.log(url)
         setLoading(true);
         fetch(url)
-        .then(res => {
-            if(!res.ok) throw new error('error fetching data.')
-            setData(res.data);
+        .then((res) => {
+            if(!res.ok) throw setError('error fetching data.')
             setError(null);
+            return res.json();
+        })
+        .then(jsonData => {
+            setData(jsonData);
         })
         .catch(err => {
             setError(err)

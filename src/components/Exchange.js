@@ -3,7 +3,7 @@ import React from 'react'
 export default function Exchange({ exchange }) {
   return (
     <div>
-      <img src={exchange.logo} alt={exchange.name} />
+      <img src={exchange.image} alt={exchange.name} />
       <div>{exchange.name}</div>
       <div>{exchange.country}</div>
       <div>{exchange.url}</div>

@@ -1,6 +1,8 @@
 import useFetch from '../hooks/fetchDataHook'
 import Exchange from './Exchange'
 import { v4 as uuid } from 'uuid'
+import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
+import ExchangeDetail from './ExchangeDetail';
 
 export default function ExchangeList() {
     // API URL
@@ -24,10 +26,10 @@ export default function ExchangeList() {
             {error && <div>{error}</div>}
             {!loading && !error && exchanges.length ?
                 exchanges
-                .slice(0, 10)
-                .map(exchange =>
-                    <Exchange key={uuid()} exchange={exchange} />
-                )
+                    .slice(0, 10)
+                    .map(exchange =>
+                        <Exchange key={uuid()} exchange={exchange} />
+                    )
                 : null
             }
         </div>

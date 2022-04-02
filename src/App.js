@@ -1,3 +1,4 @@
+import ExchangeList from './components/ExchangeList';
 import './css/App.css';
 
 export default function App() {
@@ -8,6 +9,7 @@ export default function App() {
           Crypto Direct
         </p>
       </header>
+      <ExchangeList />
     </div>
   );
 }

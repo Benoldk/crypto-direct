@@ -2,20 +2,9 @@
   text-align: center;
 }
 
-.App-logo {
-  height: 40vmin;
-  pointer-events: none;
-}
-
-@media (prefers-reduced-motion: no-preference) {
-  .App-logo {
-    animation: App-logo-spin infinite 20s linear;
-  }
-}
-
 .App-header {
   background-color: #282c34;
-  min-height: 50vh;
+  height: 450px;
   display: flex;
   flex-direction: column;
   align-items: center;
@@ -28,11 +17,115 @@
   color: #61dafb;
 }
 
-@keyframes App-logo-spin {
-  from {
-    transform: rotate(0deg);
+.header-top {
+  width: 100%;
+  height: 40px;
+  background-color: whitesmoke;
+  position: absolute;
+  top: 0;
+}
+
+.title {
+  width: 25%;
+  height: inherit;
+  font-size: 24px;
+  font-weight: bold;
+  float: left;
+  color: rgb(25,101,174);
+  text-align: left;
+  padding-left: 20px;
+}
+
+.nav {
+  width: 70%;
+  height: inherit;
+  display: inline-block;
+}
+
+.nav-btn {
+  width: 150px;
+  height: 40px;
+  font-size: 20px;
+  display: flex;
+  justify-content: center;
+  text-align: center;
+  line-height: 40px;
+  color: #202428;
+  float: right;
+}
+
+.linked-in {
+  width: 32px;
+  height: 32px;
+  background: url('../images/linked-in.png');
+  background-size: contain;
+  background-repeat: no-repeat;
+}
+
+.header-main {
+  width: 100%;
+  height: 100%;
+  display: flex;
+  justify-content: center;
+  background: url('../images/header-background.jpg') no-repeat center;
+}
+
+.logo-background {
+  height: 256px;
+  width: 256px;
+  background-image: url('../images/crypto-coin-background.png');
+  background-size: contain;
+  position: absolute;
+  top: 95px;
+}
+
+.logo-top {
+  height: 256px;
+  width: 256px;
+  background-image: url('../images/crypto-coin-top.png');
+  background-size: contain;
+  position: absolute;
+  top: 95px;
+}
+
+.logo-bottom {
+  height: 256px;
+  width: 256px;
+  background-image: url('../images/crypto-coin-bottom.png');
+  background-size: contain;
+  position: absolute;
+  top: 100px;
+}
+
+@media (prefers-reduced-motion: no-preference) {
+  .logo-top {
+    animation: logo-top-move 2s ease infinite;
   }
-  to {
-    transform: rotate(360deg);
+  .logo-bottom {
+    animation: logo-bottom-move 2s ease infinite;
+  }
+}
+
+@keyframes logo-top-move {
+  0% {
+    transform: translateY(-2%);
+  }
+  50% {
+    transform: translateY(1%);
+  }
+  100% {
+    transform: translateY(-2%);
+  }
+}
+
+@keyframes logo-bottom-move {
+  0% {
+    transform: translateY(2%);
+  }
+  50% {
+    transform: translateY(-1%);
+  }
+  100% {
+    transform: translateY(2%);
   }
 }

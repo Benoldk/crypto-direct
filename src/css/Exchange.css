@@ -1,0 +1,162 @@
+.exchange-list {
+    width: 90%;
+    min-height: 750px;
+    margin: auto;
+    background-color: #F5F7FC;
+    padding-top: 50px;
+    display: flex;
+    flex-direction: row;
+    flex-wrap: wrap;
+    align-items: center;
+    justify-content: center;
+}
+
+.exchange {
+    width: 300px;
+    height: 275px;
+    background-color: white;
+    text-decoration: none;
+    color: #202428;
+    margin-left: 10px;
+    margin-right: 10px;
+    margin-bottom: 25px;
+    border-radius: 10px 10px 10px 10px;
+    border: 1px solid rgba(0, 0, 0, 0.25);
+    text-align: left;
+}
+
+.exchange-logo {
+    width: 100%;
+    height: 150px;
+    border-radius: 10px 10px 0px 0px;
+}
+
+.exchange-info {
+    width: 90%;
+    margin: auto;
+}
+
+.exchange-name,
+.exchange-country,
+.exchange-url,
+.exchange-rank {
+    height: 25px;
+    width: 100%;
+}
+
+.exchange-name {
+    font-weight: bold;
+}
+
+.exchange-country,
+.exchange-url {
+    font-size: 14px;
+}
+
+.exchange-rank {
+    padding-top: 10px;
+    border-top: 1px solid rgba(0, 0, 0, 0.1);
+    display: inline-flex;
+}
+
+.exchage-rank-number {
+    border: 2px solid rgb(25,101,174);
+    border-radius: 50%;
+    height: 25px;
+    width: 25px;
+}
+
+.content {
+    width: 90%;
+    min-height: 750px;
+    margin: auto;
+    background-color: #F5F7FC;
+    padding-top: 50px;
+}
+
+.info {
+    width: 50%;
+    margin: auto;
+}
+
+.exchange-detail-name,
+.exchange-detail-country,
+.exchange-detail-est,
+.exchange-detail-rank,
+.exchange-detail-desc {
+    width: 100%;
+    height: 40px;
+    text-align: center;
+    line-height: 40px;
+    border-width: 0px 0px 1px 0px;
+    border-image: 
+        linear-gradient(45deg, rgb(206, 206, 207) 0%, rgb(0, 0, 0) 50%, rgb(206, 206, 207) 100%);
+    border-image-slice: 4;
+    border-style: solid;
+}
+
+.exchange-detail-desc {
+    min-height: 150px;
+}
+
+.exchange-detail-socials {
+    width: 100%;
+    height: 80px;
+    display: inline-flex;
+    flex-direction: row;
+    justify-content: center;
+    align-items: center;
+}
+
+.facebook-icon,
+.reddit-icon,
+.telegram-icon,
+.twitter-icon,
+.slack-icon,
+.other-url-icon {
+    width: 64px;
+    height: 64px;
+    background-repeat: no-repeat;
+    background-size: contain;
+    margin: 10px;
+}
+
+.facebook-icon {
+    background-image: url('../images/facebook-icon.png');
+}
+
+.reddit-icon {
+    background-image: url('../images/reddit-icon.png');
+}
+
+.telegram-icon {
+    background-image: url('../images/telegram-icon.png');
+}
+
+.twitter-icon {
+    background-image: url('../images/twitter-icon.png');
+}
+
+.slack-icon {
+    background-image: url('../images/slack-icon.png');
+}
+
+.other-url-icon {
+    background-image: url('../images/website-icon.png');
+}
+
+.backBtn {
+    width: 150px;
+    height: 50px;
+    background-color: rgb(25,101,174);
+    border: none;
+    border-radius: 2px;
+    font-size: 18px;
+    font-weight: bold;
+    color: white;
+}
+
+.backBtn:hover {
+    color: black;
+    cursor: pointer;
+}

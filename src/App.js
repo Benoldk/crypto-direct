@@ -14,7 +14,6 @@ export default function App() {
             </div>
             <div className='nav'>
               <a href='https://www.linkedin.com/in/ebaby-benold-11216325/'><div className='nav-btn'><div className='linked-in'></div></div></a>
-              <Link to='/about'><div className='nav-btn'>About</div></Link>
               <Link to='/'><div className='nav-btn'>Home</div></Link>
             </div>
           </div>

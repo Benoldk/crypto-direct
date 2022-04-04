@@ -11,58 +11,62 @@ export default function ExchangeDetail() {
   const { data: exchange, loading, error } = useFetch(`${URL}${ENDPOINTS.EXCHANGES}/${id}`)
 
   return (
-    <div>
+    <div className='content'>
       {loading && <div>LOADING...</div>}
       {error && <div>{error}</div>}
       {!loading && !error &&
-        <div>
-          <img  className='exchange-detail-logo' src={exchange.image} alt={exchange.name} />
-          <div className='exchange-detail-name'>{exchange.name}</div>
-          <div className='exchange-detail-country'>{exchange.country ? exchange.country : 'N/A'}</div>
-          <div className='exchange-detail-est'>{exchange.year_established}</div>
-          <div className='exchange-detail-rank'>{exchange.trust_score_rank}</div>
+        <div className='info'>
+          <img className='exchange-detail-logo' src={exchange.image} alt={exchange.name} />
+          <div className='exchange-detail-name'>Name: {exchange.name}</div>
+          <div className='exchange-detail-country'>Country: {exchange.country ? exchange.country : 'N/A'}</div>
+          <div className='exchange-detail-est'>Year Established: {exchange.year_established}</div>
+          <div className='exchange-detail-rank'>Trust Score: {exchange.trust_score_rank}</div>
           <div className='exchange-detail-desc'>{exchange.description &&
-            <div>{exchange.description}</div>}</div>
-          <div className='exchange-detail-socials'>Social Media:
+            <>
+              <div>Description</div>
+              <div>{exchange.description}</div>
+            </>}
+          </div>
+          <div className='exchange-detail-socials'>
             {exchange.facebook_url &&
               <div>
-                <Link to={exchange.facebook_url}>{exchange.facebook_url}</Link>
+                <a href={exchange.facebook_url}><div className='facebook-icon' /></a>
               </div>}
 
-            {exchange.redit_url &&
+            {exchange.reddit_url &&
               <div>
-                <Link to={exchange.redit_url}>{exchange.redit_url}</Link>
+                <a href={exchange.redit_url}><div className='reddit-icon' /></a>
               </div>}
 
             {exchange.telegram_url &&
               <div>
-                <Link to={exchange.telegram_url}>{exchange.telegram_url}</Link>
+                <a href={exchange.telegram_url}><div className='telegram-icon' /></a>
               </div>}
 
             {exchange.slack_url &&
               <div>
-                <Link to={exchange.slack_url}>{exchange.slack_url}</Link>
+                <a href={exchange.slack_url}><div className='slack-icon' /></a>
               </div>}
 
             {exchange.other_url_1 &&
               <div>
-                <Link to={exchange.other_url_1}>{exchange.other_url_1}</Link>
+                <a href={exchange.other_url_1}><div className='other-url-icon' /></a>
               </div>}
 
             {exchange.other_url_2 &&
               <div>
-                <Link to={exchange.other_url_2}>{exchange.other_url_2}</Link>
+                <a href={exchange.other_url_2}><div className='other-url-icon' /></a>
               </div>}
 
             {exchange.twitter_handle &&
               <div>
-                <Link to={exchange.twitter_handle}>{exchange.twitter_handle}</Link>
+                <a href={exchange.twitter_handle}><div className='twitter-icon' /></a>
               </div>}
           </div>
         </div>}
 
       <Link to='/'>
-        <button>BACK</button>
+        <button className='backBtn'>BACK</button>
       </Link>
     </div>
   )

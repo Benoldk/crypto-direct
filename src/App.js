@@ -1,6 +1,6 @@
 import ExchangeList from './components/ExchangeList';
 import './css/App.css';
-import { BrowserRouter as Router, Route, Routes, Switch } from 'react-router-dom';
+import { BrowserRouter as Router, Route, Routes,  } from 'react-router-dom';
 import ExchangeDetail from './components/ExchangeDetail';
 
 export default function App() {
@@ -12,14 +12,10 @@ export default function App() {
         </p>
       </header>
       <Router>
-        <Switch>
-          <Route exact path='/'>
-            <ExchangeList />
-          </Route>
-          <Route path='/exchange/:id'>
-            <ExchangeDetail />
-          </Route>
-        </Switch>
+        <Routes>
+          <Route path='/' element={<ExchangeList />} />
+          <Route path='/exchange/:id'  element={<ExchangeDetail />} />
+        </Routes>
       </Router>
     </div>
   );

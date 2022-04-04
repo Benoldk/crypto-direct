@@ -2,12 +2,13 @@ import useFetch from '../hooks/fetchDataHook';
 import Exchange from './Exchange';
 import { v4 as uuid } from 'uuid';
 import { URL, ENDPOINTS } from '../Common/Common';
+import '../css/Exchange.css'
 
 export default function ExchangeList() {
     // use custom hook to fetch data on page load
     const { data: exchanges, loading, error } = useFetch(`${URL}${ENDPOINTS.EXCHANGES}`);
     return (
-        <div>
+        <div className='exchange-list'>
             {loading && <div>LOADING...</div>}
             {error && <div>{error}</div>}
             {!loading && !error && exchanges.length ?

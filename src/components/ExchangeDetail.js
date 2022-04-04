@@ -16,14 +16,14 @@ export default function ExchangeDetail() {
       {error && <div>{error}</div>}
       {!loading && !error &&
         <div>
-          <img src={exchange.image} alt={exchange.name} />
-          <div>{exchange.name}</div>
-          <div>{exchange.country ? exchange.country : 'N/A'}</div>
-          <div>{exchange.year_established}</div>
-          <div>{exchange.trust_score_rank}</div>
-          <div>{exchange.description &&
+          <img  className='exchange-detail-logo' src={exchange.image} alt={exchange.name} />
+          <div className='exchange-detail-name'>{exchange.name}</div>
+          <div className='exchange-detail-country'>{exchange.country ? exchange.country : 'N/A'}</div>
+          <div className='exchange-detail-est'>{exchange.year_established}</div>
+          <div className='exchange-detail-rank'>{exchange.trust_score_rank}</div>
+          <div className='exchange-detail-desc'>{exchange.description &&
             <div>{exchange.description}</div>}</div>
-          <div>Social Media:
+          <div className='exchange-detail-socials'>Social Media:
             {exchange.facebook_url &&
               <div>
                 <Link to={exchange.facebook_url}>{exchange.facebook_url}</Link>

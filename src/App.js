@@ -9,12 +9,13 @@ export default function App() {
       <div className="App">
         <header className="App-header">
           <div className='header-top'>
-            <div className='title'>
-              Crypto Direct
-            </div>
+            <Link to='/'>
+              <div className='title'>
+                Crypto Direct
+              </div>
+            </Link>
             <div className='nav'>
               <a href='https://www.linkedin.com/in/ebaby-benold-11216325/'><div className='nav-btn'><div className='linked-in'></div></div></a>
-              <Link to='/about'><div className='nav-btn'>About</div></Link>
               <Link to='/'><div className='nav-btn'>Home</div></Link>
             </div>
           </div>

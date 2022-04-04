@@ -1,4 +1,7 @@
+import ExchangeList from './components/ExchangeList';
 import './css/App.css';
+import { BrowserRouter as Router, Route, Routes,  } from 'react-router-dom';
+import ExchangeDetail from './components/ExchangeDetail';
 
 export default function App() {
   return (
@@ -8,6 +11,12 @@ export default function App() {
           Crypto Direct
         </p>
       </header>
+      <Router>
+        <Routes>
+          <Route path='/' element={<ExchangeList />} />
+          <Route path='/exchange/:id'  element={<ExchangeDetail />} />
+        </Routes>
+      </Router>
     </div>
   );
 }

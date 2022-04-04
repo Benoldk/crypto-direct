@@ -68,3 +68,50 @@ This section has moved here: [https://facebook.github.io/create-react-app/docs/d
 ### `npm run build` fails to minify
 
 This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+
+
+
+*********************************************************************************************************************************************************************************
+*********************************************************************************************************************************************************************************
+
+The Task:
+
+Using the Coingecko public API (https://www.coingecko.com/en/api), build an application that will serve as a directory of cryptocurrency exchanges. The main page should be a list with the first ten exchanges with some high-level information (name, country, URL, logo, trust rank).
+
+When the user clicks on an exchange, show its details on a separate page. Included in those details should be the name, country, trust rank, logo, year of establishment, social media links, description, and a back-to-main-page button.
+
+Tech Stack:
+
+As long as the solution is built using React, you can use any other tools you like.
+
+Browser Support:
+You should test your work in the latest version of Chrome. If you use any features that are not supported by common browsers or IE 11, you should mention these features and how you would provide a suitable fallback experience if your code does not do so already.
+
+Dependencies:
+
+Please use `npm` for dependency management.
+
+You can use any 3rd-party libraries as necessary or desired, but we prefer the use of minimal dependencies.
+
+Coding Standard:
+
+Your styles should be responsive and mobile-first. Please use ESLint and Prettier to format your code.
+
+Evaluation:
+
+Your React app should build without errors. If there are extra steps required to get it to compile, they should be covered in your README.md.
+Your commit history is important to us. Try to make meaningful commit messages that show your progress.
+Your code should be easy to understand and communicative (e.g. in comments, variable names, etc). Clean code principles, componentization, appropriate test coverage, and code documentation are key factors and are highly valued.
+Bonus points for testing (stakefish ❤️ end-to-end testing with Cypress).
+
+Please aim to return to us your solution, including all the files you would like to share within 3 days.
+
+If you have any questions, please feel free to contact us.
+
+
+We hope you enjoy this and happy coding!
+
+stakefish
+
+*********************************************************************************************************************************************************************************
+*********************************************************************************************************************************************************************************

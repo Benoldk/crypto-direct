@@ -1,6 +1,6 @@
-import useFetch from '../hooks/fetchDataHook'
-import Exchange from './Exchange'
-import { v4 as uuid } from 'uuid'
+import useFetch from '../hooks/fetchDataHook';
+import Exchange from './Exchange';
+import { v4 as uuid } from 'uuid';
 import { URL, ENDPOINTS } from '../Common/Common';
 
 export default function ExchangeList() {
@@ -8,7 +8,6 @@ export default function ExchangeList() {
     const { data: exchanges, loading, error } = useFetch(`${URL}${ENDPOINTS.EXCHANGES}`);
     return (
         <div>
-            {/** Conditionally load elements **/}
             {loading && <div>LOADING...</div>}
             {error && <div>{error}</div>}
             {!loading && !error && exchanges.length ?

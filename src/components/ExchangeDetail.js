@@ -1,11 +1,15 @@
-import React from 'react'
-import { Link, useParams } from 'react-router-dom'
-import useFetch from '../hooks/fetchDataHook'
+import React from 'react';
+import { Link, useParams } from 'react-router-dom';
+import useFetch from '../hooks/fetchDataHook';
 import { URL, ENDPOINTS } from '../Common/Common';
 
 export default function ExchangeDetail() {
+  // id from route
   const { id } = useParams();
+
+  // gather data from api
   const { data: exchange, loading, error } = useFetch(`${URL}${ENDPOINTS.EXCHANGES}/${id}`)
+
   return (
     <div>
       {loading && <div>LOADING...</div>}
